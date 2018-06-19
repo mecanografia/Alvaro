@@ -15,10 +15,15 @@ if (!isset($_POST['pagina'])){
   }
 */
 
-if (isset ($_POST['sub'])){
-	if ((isset ($_POST['pagina'])) && (!empty ($_POST['pagina']))) {
-		$pag = $_POST['pagina']
-	}else {
+if (isset($_POST['sub'])){
+	if ((isset($_POST['pagina'])) && (!empty($_POST['pagina']))) {
+		$pag = $_POST['pagina'];
+		echo "Wordpress funciona!!!";
+		header ('Location: wordpress/index.php');
+	} elseif ((isset($_POST['pagina'])) && (!empty($_POST['pagina']))) {
+		echo "Drupal funciona!!!";
+		header ('Location: drupal/index.php');
+	} else {
 		echo "Introduce algun texto por favor";
 	}
 }  
