@@ -1,1 +1,43 @@
 /*para alvaro*/
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Alvaro Bueno">
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <form class="form-signin" method="post">
+      <img class="mb-4" src="https://www.artescritorio.com/wp-content/uploads/2015/11/monsterball-portada.png" 
+      alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Catch in!! o logeate</h1>
+      <label for="pagina" class="sr-only">Página</label>
+      <input type="text" name="pagina" class="form-control" placeholder="Página" method="post">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+</body>
+<?php
+/*session_start();
+$pag = $_POST['pagina'];
+if ($pag == 'wordpress') && ($_SESSION['canAccess'] == true;) {
+  header('Location: index.php');
+  } elseif ($pag == 'drupal'){
+  IF ($_SESSION['canAccess'] == true;) && ($_SESSION['canAccess'] == true;) {
+  header('Location: drupal/index.php');                              
+  }*/
+  if (isset($_POST)) {
+	if ($_POST['pagina'] == 'wordpress') {
+		header('Location: wordpress/index.php');
+	}elseif ($_POST['pagina']== 'drupal') {
+		header('Location: drupal/index.php');
+	}else (header('Location: index.php');)
+  }
+?>
+</html>
