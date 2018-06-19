@@ -1,4 +1,18 @@
 /*para alvaro*/
+<?php
+/*session_start();*/
+
+if (!isset($_POST['pagina'])){
+	echo "Mestascontando";
+} else {
+	if ($_POST['pagina'] == 'wordpress') {
+		header('Location: wordpress/index.php');
+	}elseif ($_POST['pagina']== 'drupal') {
+		header('Location: drupal/index.php');
+	}else (header('Location: index.php');)
+  }
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -23,14 +37,4 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 </body>
-<?php
-/*session_start();*/
-  if (isset($_POST['pagina'])) {
-	if ($_POST['pagina'] == 'wordpress') {
-		header('Location: wordpress/index.php');
-	}elseif ($_POST['pagina']== 'drupal') {
-		header('Location: drupal/index.php');
-	}else (header('Location: index.php');)
-  }
-?>
 </html>
