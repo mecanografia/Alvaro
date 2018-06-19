@@ -1,10 +1,10 @@
-/*para alvaro*/
 <?php
-/*session_start();*/
+/*
+session_start();
 
-/*if (!isset($_POST['pagina'])){
+if (!isset($_POST['pagina'])){
 	echo "Mestascontando";
-} else {*/
+} else {
 	if ($_POST['pagina'] == 'wordpress') {
 		header('Location: wordpress/index.php');
 	}elseif ($_POST['pagina']== 'drupal') {
@@ -12,9 +12,20 @@
 	}else {
 		(header('Location: index.php'));
 	}
-  /*}*/
+  }
+*/
+
+if (isset ($_POST['sub'])){
+	if ((isset ($_POST['pagina'])) && (!empty ($_POST['pagina']))) {
+		$pag = $_POST['pagina']
+	}else {
+		echo "Introduce algun texto por favor";
+	}
+}  
   
 ?>
+
+
 
 <html lang="en">
   <head>
@@ -37,7 +48,7 @@
       <h1 class="h3 mb-3 font-weight-normal">Catch in!! o logeate</h1>
       <label for="pagina" class="sr-only">Página</label>
       <input type="text" name="pagina" class="form-control" placeholder="Página" method="post">
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" name="sub">Sign in</button>
     </form>
 </body>
 </html>
