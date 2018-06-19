@@ -9,7 +9,9 @@ if (!isset($_POST['pagina'])){
 		header('Location: wordpress/index.php');
 	}elseif ($_POST['pagina']== 'drupal') {
 		header('Location: drupal/index.php');
-	}else (header('Location: index.php');)
+	}else {
+		(header('Location: index.php'));
+	}
   }
 ?>
 
