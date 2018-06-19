@@ -24,15 +24,8 @@
     </form>
 </body>
 <?php
-/*session_start();
-$pag = $_POST['pagina'];
-if ($pag == 'wordpress') && ($_SESSION['canAccess'] == true;) {
-  header('Location: index.php');
-  } elseif ($pag == 'drupal'){
-  IF ($_SESSION['canAccess'] == true;) && ($_SESSION['canAccess'] == true;) {
-  header('Location: drupal/index.php');                              
-  }*/
-  if (isset($_POST)) {
+/*session_start();*/
+  if (isset($_POST['pagina'])) {
 	if ($_POST['pagina'] == 'wordpress') {
 		header('Location: wordpress/index.php');
 	}elseif ($_POST['pagina']== 'drupal') {
