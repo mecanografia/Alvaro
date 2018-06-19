@@ -2,9 +2,9 @@
 <?php
 /*session_start();*/
 
-if (!isset($_POST['pagina'])){
+/*if (!isset($_POST['pagina'])){
 	echo "Mestascontando";
-} else {
+} else {*/
 	if ($_POST['pagina'] == 'wordpress') {
 		header('Location: wordpress/index.php');
 	}elseif ($_POST['pagina']== 'drupal') {
@@ -12,7 +12,8 @@ if (!isset($_POST['pagina'])){
 	}else {
 		(header('Location: index.php'));
 	}
-  }
+  /*}*/
+  
 ?>
 
 <html lang="en">
